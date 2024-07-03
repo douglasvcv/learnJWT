@@ -4,6 +4,9 @@ import {JWT} from 'google-auth-library'
 
 import 'dotenv/config'
 
+//it is only the try
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 const servicesAccountAuth = new JWT({
     email: process.env.EMAIL_GOOGLE,
     key: process.env.KEY_GOOGLE,
